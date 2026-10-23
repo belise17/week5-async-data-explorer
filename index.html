@@ -1,0 +1,131 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover beauty products with Belise Beauty Explorer."
+    />
+    <title>Belise Beauty Explorer</title>
+  </head>
+
+  <body class="min-h-screen bg-pink-50 text-gray-800">
+    <!-- Header -->
+    <header class="border-b border-pink-100 bg-white shadow-sm">
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5"
+      >
+        <div>
+          <h1 class="text-2xl font-bold text-pink-600 md:text-3xl">
+            Belise Beauty
+          </h1>
+          <p class="mt-1 text-sm text-gray-500">
+            Discover your beauty essentials
+          </p>
+        </div>
+
+        <span
+          class="rounded-full bg-pink-100 px-4 py-2 text-sm font-semibold text-pink-600"
+        >
+          Beauty Store
+        </span>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="mx-auto max-w-7xl px-6 py-8">
+      <!-- Statistics -->
+      <section class="mb-8 grid gap-4 md:grid-cols-3">
+        <div class="rounded-2xl bg-white p-5 shadow-sm">
+          <p class="text-sm text-gray-500">Total Products</p>
+          <p
+            id="total-products"
+            class="mt-2 text-3xl font-bold text-pink-600"
+          >
+            0
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white p-5 shadow-sm">
+          <p class="text-sm text-gray-500">Categories</p>
+          <p
+            id="total-categories"
+            class="mt-2 text-3xl font-bold text-pink-600"
+          >
+            0
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white p-5 shadow-sm">
+          <p class="text-sm text-gray-500">Average Price</p>
+          <p
+            id="average-price"
+            class="mt-2 text-3xl font-bold text-pink-600"
+          >
+            $0.00
+          </p>
+        </div>
+      </section>
+
+      <!-- Search and filters -->
+      <section class="mb-8 grid gap-4 md:grid-cols-3">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search beauty products..."
+          aria-label="Search products"
+          class="w-full rounded-xl border border-pink-200 bg-white px-4 py-3 outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-100"
+        />
+
+        <select
+          id="category-filter"
+          aria-label="Filter by category"
+          class="rounded-xl border border-pink-200 bg-white px-4 py-3 outline-none focus:border-pink-500"
+        >
+          <option value="all">All categories</option>
+        </select>
+
+        <select
+          id="sort-select"
+          aria-label="Sort products"
+          class="rounded-xl border border-pink-200 bg-white px-4 py-3 outline-none focus:border-pink-500"
+        >
+          <option value="default">Sort: Default</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </section>
+
+      <!-- Products -->
+      <section aria-live="polite">
+        <div class="mb-5 flex items-center justify-between gap-4">
+          <h2 class="text-xl font-bold text-gray-900">
+            Explore Products
+          </h2>
+
+          <p id="results-count" class="text-sm text-gray-500">
+            Loading products...
+          </p>
+        </div>
+
+        <div id="app" aria-busy="true">
+          <p class="rounded-xl bg-white p-8 text-center text-gray-500">
+            Loading beauty products...
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 border-t border-pink-100 bg-white py-6 text-center">
+      <p class="text-sm text-gray-500">
+        © 2026 Belise Beauty Explorer. Made with love.
+      </p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
